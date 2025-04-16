@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Actor';
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #131212;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+}
+
+nav .fa {
+    font-size: 27px;
+    margin-right: 10px;
+}
+
+.icon {
+    font-family: 'Carattere';
+    font-size: 25px;
+}
+
+h1 {
+    font-family: 'ADLaM Display';
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #f1f1f1;
+    padding-top: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar li a.active {
+    background-color: #060606;
+    color: white;
+}
+
+.sidebar li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+.whole {
+    margin-left: 220px;
+    padding-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.ronaldo {
+    width: 350px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.ronaldo img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+p {
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .whole {
+        margin-left: 0;
+        padding: 20px;
+        flex-direction: column;
+    }
+}
+
+@media (orientation: landscape) {
+    .whole {
+        flex-direction: row;
+    }
+}
